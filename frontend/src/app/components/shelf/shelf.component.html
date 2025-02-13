@@ -7,6 +7,10 @@
 </head>
 <body>
     <h1>Shelf Positions</h1>
+    @if (!shelfItems().length) {
+      <p>Loading...</p>
+    }
+
     <table class="table">
         <thead>
           <tr>
@@ -21,6 +25,11 @@
                 <td>{{shelf.id}}</td>
                 <td>{{shelf.name}}</td>
                 <td>{{shelf.shelfType}}</td>
+                <div>
+                  <td><button type="button" class="btn btn-success">Add Shelf Position</button></td>
+                  <td><button type="button" class="btn btn-primary">Edit</button></td>
+                  <td><button type="button" class="btn btn-danger">🗑️</button></td>
+              </div>
             </tr>
           }
         </tbody>
